@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sviluppo Siti Web Professionali per Aziende | WebAgency</title>
+
+<meta name="description" content="Creiamo siti web professionali e landing page ad alta conversione per piccole e medie imprese. Design moderno, SEO ottimizzata e sviluppo veloce.">
+<meta name="keywords" content="creazione siti web, sviluppo siti web aziendali, landing page professionali, web agency, siti web PMI">
+<meta name="author" content="WebAgency">
+
+<!-- Open Graph -->
+<meta property="og:title" content="WebAgency - Creazione Siti Web Professionali">
+<meta property="og:description" content="Landing page e siti web ad alta conversione per piccole e medie imprese.">
+<meta property="og:type" content="website">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+font-family:'Inter',sans-serif;
+background:#050505;
+color:white;
+}
+
+/* NAVBAR */
+
+.navbar{
+padding:20px 0;
+backdrop-filter: blur(10px);
+background:rgba(10,10,20,0.85);
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.navbar-brand{
+font-family:'Space Grotesk',sans-serif;
+font-size:1.6rem;
+font-weight:700;
+letter-spacing:1px;
+}
+
+.nav-link{
+font-size:1.1rem;
+margin-left:25px;
+position:relative;
+transition:0.3s;
+}
+
+.nav-link::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+left:0;
+bottom:-5px;
+background:linear-gradient(90deg,#6a5cff,#b44cff);
+transition:0.4s;
+}
+
+.nav-link:hover::after{
+width:100%;
+}
+
+.nav-link:hover{
+transform:translateY(-2px);
+}
+
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+background:
+radial-gradient(circle at 30% 30%, #2b0a45, transparent 40%),
+radial-gradient(circle at 70% 70%, #0d0d2e, transparent 40%),
+#050505;
+}
+
+.hero-title{
+font-family:'Space Grotesk',sans-serif;
+font-size:3.75rem;
+font-weight:750;
+background:linear-gradient(90deg,#6a5cff,#b44cff,#4da3ff);
+text-shadow: #050505;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero p{
+font-size:1.2rem;
+color:#cfcfe0;
+}
+
+/* CTA BUTTON */
+
+.hero-btn{
+background:linear-gradient(90deg,#6a5cff,#b44cff);
+border:none;
+padding:14px 34px;
+border-radius:40px;
+font-weight:600;
+transition:0.35s;
+position:relative;
+overflow:hidden;
+max-width: 15rem;
+}
+
+.hero-btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 25px rgba(150,100,255,0.6);
+}
+
+.hero-btn::before{
+content:"";
+position:absolute;
+width:120%;
+height:100%;
+background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
+left:-120%;
+top:0;
+transition:0.6s;
+}
+
+.hero-btn:hover::before{
+left:120%;
+}
+
+
+/* SERVICES */
+
+.services-section {
+  padding:100px 0;
+  background: linear-gradient(180deg,#050505,#0b0b1f);
+}
+
+.services-section h2 {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:2.5rem;
+  margin-bottom:20px;
+  color:white;
+}
+
+.services-section p {
+  font-size:1.1rem;
+  color:#cfcfe0;
+}
+
+/* Animazione leggera all'apparizione (fade + slide) */
+.card-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlide 0.8s forwards;
+  animation-delay: 0.2s;
+}
+
+.card-animate:nth-child(1) { animation-delay: 0.1s; }
+.card-animate:nth-child(2) { animation-delay: 0.3s; }
+.card-animate:nth-child(3) { animation-delay: 0.5s; }
+.card-animate:nth-child(4) { animation-delay: 0.7s; }
+.card-animate:nth-child(5) { animation-delay: 0.9s; }
+
+@keyframes fadeSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* CONTACT */
+
+.contact-section{
+padding:120px 0;
+background:
+linear-gradient(120deg,#0a0a20,#160028);
+}
+
+.contact-title{
+font-family:'Space Grotesk',sans-serif;
+font-size:2.4rem;
+margin-bottom:30px;
+}
+
+.form-control{
+background:#0d0d1f;
+border:1px solid rgba(255,255,255,0.1);
+color:white;
+padding:14px;
+}
+
+.form-control:focus{
+background:#0d0d1f;
+color:white;
+border-color:#7b5cff;
+box-shadow:0 0 10px rgba(120,90,255,0.4);
+}
+
+.contact-btn{
+background:linear-gradient(90deg,#6a5cff,#b44cff);
+border:none;
+padding:14px;
+border-radius:30px;
+font-weight:600;
+transition:0.3s;
+}
+
+.contact-btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px rgba(120,90,255,0.5);
+}
+
+
+/* From Uiverse.io by codebykay101 */ 
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .glass {
+  position: relative;
+  width: 180px;
+  height: 200px;
+  background: linear-gradient(#fff2, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 10px;
+  margin: 0 -45px;
+  backdrop-filter: blur(10px);
+  transform: rotate(calc(var(--r) * 1deg));
+}
+
+.container:hover .glass {
+  transform: rotate(0deg);
+  margin: 0 10px;
+}
+
+.container .glass::before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.container .glass svg {
+  font-size: 2.5em;
+  fill: #fff;
+}
+
+
+.hero-title .highlight {
+    color: #ff6a5c; /* colore acceso */
+    font-weight: 700;
+}
+
+/* Bullet list */
+.hero-list {
+    list-style: disc inside;
+    padding-left: 0;
+    margin: 0;
+    color: #cfcfe0;
+    font-size: 1.2rem;
+}
+
+/* Wrapper animato per titolo + lista */
+.hero-text-floating {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Animazione floating verticale */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+
+#vantaggi h2, #vantaggi h3, #vantaggi ul li {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s forwards;
+}
+
+#vantaggi h2 { animation-delay: 0.2s; }
+#vantaggi h3 { animation-delay: 0.4s; }
+#vantaggi ul li:nth-child(1) { animation-delay: 0.6s; }
+#vantaggi ul li:nth-child(2) { animation-delay: 0.8s; }
+#vantaggi ul li:nth-child(3) { animation-delay: 1s; }
+#vantaggi ul li:nth-child(4) { animation-delay: 1.2s; }
+#vantaggi ul li:nth-child(5) { animation-delay: 1.4s; }
+#vantaggi ul li:nth-child(6) { animation-delay: 1.6s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.vantaggi-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* distanza tra le card */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+/* Card */
+.vantaggiCards {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px; /* spazio tra icona e testo */
+  flex: 1 1 300px; /* larghezza minima e responsiva */
+  max-width: 400px;
+  padding: 20px 25px;
+  background: rgba(255,255,255,0.05);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  cursor: pointer;
+}
+
+/* Icona */
+.vantaggiCards .icon {
+  font-size: 1.8rem;
+  line-height: 1;
+  margin-top: 4px; /* allineamento verticale */
+}
+
+/* Testo */
+.vantaggiCards .text strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.vantaggiCards .text p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #cfcfe0;
+}
+
+/* Hover animato */
+.vantaggiCards:hover {
+  transform: translate(8px, -5px);
+  background: rgba(106, 92, 255, 0.25);
+  box-shadow: 0 10px 20px rgba(106, 92, 255, 0.35);
+}
+
+  .contact-section .col-lg-6 + .col-lg-6 {
+    padding-left: 10rem;
+  }
+
+.img-bordered {
+  border: 2px solid rgba(106, 92, 255, 0.6); /* colore coerente con gradient */
+  border-radius: 15px;                        /* mantiene l’angolo arrotondato */
+  padding: 5px;                                /* piccolo padding interno */
+  box-shadow: 0 8px 20px rgba(106, 92, 255, 0.2); /* glow leggero */
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Hover leggero per dinamismo */
+.img-bordered:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(106, 92, 255, 0.35);
+}
+
+/* Service Cards */
+/* Base section */
+.services-section {
+  padding: 100px 0;
+  color: white;
+  background-color: #2b0a45;
+}
+
+/* Subtitle */
+.section-subtitle {
+  color: #cfcfe0;
+  font-size: 1.1rem;
+}
+
+/* Card */
+.service-card {
+  background: rgba(17,1,69,1);
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+/* Icon */
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  transition: transform 0.35s ease, color 0.35s ease;
+}
+
+/* Title */
+.service-card h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Description */
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #cfcfe0;
+  margin-bottom: 10px;
+}
+
+/* Small text */
+.service-card small {
+  color: #a9a9ff;
+}
+
+/* Hover animation */
+.service-card:hover {
+  transform: rotateX(5deg) rotateY(5deg) scale(1.05);
+  box-shadow: 0 25px 50px rgba(106,92,255,0.35);
+  background: rgba(17,1,69,0.95);
+}
+
+.service-card:hover .card-icon {
+  transform: rotate(15deg) scale(1.2);
+  color: #6a5cff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-card {
+    margin: 0 auto;
+  }
+}
+
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.trust-badge {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #6a5cff, #b44cff);
+  padding: 10px 15px;
+  border-radius: 30px;
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+  box-shadow: 0 5px 15px rgba(106, 92, 255, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.trust-badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(106, 92, 255, 0.4);
+}
+
+.trust-badge .badge-icon {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+/* PRICING SECTION */
+
+.pricing-section{
+padding:120px 0;
+background:linear-gradient(180deg,#050505,#0d0225);
+}
+
+.pricing-card{
+background:rgba(255,255,255,0.05);
+padding:40px 30px;
+border-radius:20px;
+transition:0.35s;
+border:1px solid rgba(255,255,255,0.05);
+position:relative;
+}
+
+.pricing-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(106,92,255,0.35);
+background:rgba(20,10,80,0.6);
+}
+
+.plan-name{
+font-family:'Space Grotesk',sans-serif;
+font-size:1.5rem;
+margin-bottom:10px;
+}
+
+.price{
+font-size:2.5rem;
+font-weight:700;
+margin-bottom:25px;
+background:linear-gradient(90deg,#6a5cff,#b44cff,#4da3ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.pricing-features{
+list-style:none;
+padding:0;
+margin-bottom:30px;
+color:#cfcfe0;
+}
+
+.pricing-features li{
+margin-bottom:10px;
+}
+
+.pricing-btn{
+display:inline-block;
+padding:12px 30px;
+border-radius:30px;
+background:linear-gradient(90deg,#6a5cff,#b44cff);
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.pricing-btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px rgba(120,90,255,0.5);
+}
+
+/* CARD FEATURED */
+
+.featured{
+border:2px solid #6a5cff;
+transform:scale(1.05);
+}
+
+.featured:hover{
+transform:scale(1.08);
+}
+
+.best{
+position:absolute;
+top:-12px;
+left:50%;
+transform:translateX(-50%);
+background:linear-gradient(90deg,#6a5cff,#b44cff);
+padding:6px 14px;
+border-radius:20px;
+font-size:0.75rem;
+font-weight:600;
+}
+
+@media (max-width: 768px) {
+  html, body {
+   overflow-x: hidden;
+  }
+
+  .hero-image {
+    display:none;
+  }
+  .hero-div {
+    margin-left: 2rem;
+    margin-right: -2rem;
+  }
+  .pacchetti {
+    gap: 2rem;
+  }
+  .contact-title {
+    font-size: 2rem !important;
+  }
+
+  /* sezione meno schiacciata */
+.contact-section{
+padding:70px 20px;
+}
+
+/* titolo */
+.contact-title{
+font-size:2rem !important;
+line-height:1.2;
+}
+
+/* sottotitolo */
+.contact-section p{
+font-size:1rem !important;
+}
+
+/* FORM */
+
+/* input più piccoli */
+.form-control{
+padding:9px 12px;
+font-size:0.9rem;
+border-radius:8px;
+}
+
+/* textarea meno alta */
+textarea.form-control{
+min-height:90px;
+}
+
+/* bottone */
+.contact-btn{
+padding:11px;
+font-size:0.95rem;
+}
+
+/* spazio tra form e colonna destra */
+.contact-section .col-lg-6{
+margin-bottom:40px;
+}
+
+/* TESTO A DESTRA */
+
+/* spostiamo a sinistra */
+.contact-section .col-lg-6.ml-3{
+padding-left:10px;
+text-align:center;
+}
+
+/* titolo grande */
+.contact-section .hero-title{
+font-size:2rem;
+line-height:1.2;
+}
+
+/* sottotitolo */
+.contact-section h3{
+font-size:1.1rem;
+color:#cfcfe0;
+}
+
+/* TRUST BADGES */
+
+.trust-badges{
+justify-content:center !important;
+gap:10px;
+}
+
+.trust-badge{
+font-size:0.8rem;
+padding:6px 10px;
+border-radius:8px;
+background:rgba(255,255,255,0.05);
+display:flex;
+align-items:center;
+gap:6px;
+}
+
+.badge-icon{
+font-size:0.9rem;
+}
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand text-white fw-bold" href="#">Future PMI</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse justify-content-end" id="nav">
+
+<ul class="navbar-nav">
+
+<li class="nav-item"><a class="nav-link text-white fw-bold" href="#servizi">Servizi</a></li>
+<li class="nav-item"><a class="nav-link text-white fw-bold" href="#vantaggi">Vantaggi</a></li>
+<li class="nav-item"><a class="nav-link text-white fw-bold" href="#contatti">Contatti</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+<div class="container column hero-div">
+  <div class="row align-items-center">
+    <div class="hero-text-floating">
+      <h1 class="hero-title mb-3">
+        +60% di clienti <br>
+        <span class="highlight">a portata di click</span>
+      </h1>
+
+      <ul class="hero-list mb-4">
+        <li>0 competenze digitali richieste</li>
+        <li>0 gestione complicata</li>
+        <li>Costi bassi e fissi</li>
+      </ul>
+    </div>
+    <button class="hero-btn" href="#contatti">
+      Richiedi consulenza
+    </button>
+  </div>
+  <div class="text-center m--5">
+    <img
+    src="https://images.unsplash.com/photo-1559028012-481c04fa702d"
+    class="img-fluid rounded shadow-lg img-bordered hero-image"
+    style="max-width:520px;">
+  </div>
+</div>
+
+</section>
+
+
+<!-- SERVIZI -->
+<section class="services-section" id="servizi">
+  <div class="container text-center" style="display: flex; flex-direction: column !important;">
+    <div class="container column" style="display: flex; flex-direction: column !important;">
+      <h1 class="hero-title mb-4">I nostri servizi</h1>
+      <p class="section-subtitle mb-5">
+        Soluzioni digitali complete per far crescere la tua PMI online. Design, visibilità e conversioni senza pensieri.
+      </p>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <!-- Card 1: Siti Web Professionali -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="service-card">
+          <div class="card-icon">💻</div>
+          <h5>Siti Web Professionali</h5>
+          <p>90% dei clienti rimane con noi</p>
+          <small>Siti adatti alla clientela</small>
+        </div>
+      </div>
+
+      <!-- Card 2: Landing Page -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="service-card">
+          <div class="card-icon">📈</div>
+          <h5>Landing Page ad Alta Conversione</h5>
+          <p>+500 lead generati/mese</p>
+          <small>Alta conversion-rate</small>
+        </div>
+      </div>
+
+      <!-- Card 3: SEO & Marketing -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="service-card">
+          <div class="card-icon">🔍</div>
+          <h5>SEO & Marketing Digitale</h5>
+          <p>+30% traffico medio</p>
+          <small>Alta visibilità</small>
+        </div>
+      </div>
+
+      <!-- Card 4: Supporto Dedicato -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="service-card">
+          <div class="card-icon">🤝</div>
+          <h5>Supporto Dedicato</h5>
+          <p>Un team a tua disposizione per gestire ogni aspetto digitale senza stress.</p>
+          <small>Assistenza entro 24h</small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VANTAGGI -->
+
+<section id="vantaggi" style="background: linear-gradient(135deg, #080433, #390b7a); padding:100px 0;">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Testo -->
+<div class="col-lg-6 mb-5 mb-lg-0">
+  <!-- Titolo principale con gradient -->
+  <h2 class="hero-title" style="
+      font-family:'Space Grotesk',sans-serif; 
+      font-size:3rem; 
+      font-weight:700; 
+      background: linear-gradient(90deg, #6a5cff, #b44cff, #4da3ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom:25px;">
+    Perché scegliere <br>
+    Future PMI
+  </h2>
+
+  <!-- Sottotitolo con colore accentuato -->
+  <h3 style="
+      font-size:1.5rem; 
+      color:#a3a3ff; 
+      font-weight:500; 
+      margin-bottom:40px; 
+      line-height:1.5;">
+    Flessibilità, supporto giornaliero, gestione efficiente: tutto ciò che serve alla tua PMI per crescere online senza stress.
+  </h3>
+
+  <!-- Lista “card style” -->
+  <ul class="vantaggi-list">
+  <li class="vantaggiCards">
+    <div class="icon">💡</div>
+    <div class="text">
+      <strong>Soluzioni chiavi in mano</strong>
+      <p>Dal sito web alla strategia digitale, senza pensieri.</p>
+    </div>
+  </li>
+  <li class="vantaggiCards">
+    <div class="icon">🛠️</div>
+    <div class="text">
+      <strong>Supporto dedicato ogni giorno</strong>
+      <p>Risposte rapide e consulenza su misura.</p>
+    </div>
+  </li>
+  <li class="vantaggiCards">
+    <div class="icon">💰</div>
+    <div class="text">
+      <strong>Gestione efficiente dei costi</strong>
+      <p>Tariffe trasparenti e piani fissi senza sorprese.</p>
+    </div>
+  </li>
+  <li class="vantaggiCards">
+    <div class="icon">📈</div>
+    <div class="text">
+      <strong>Incremento reale dei clienti</strong>
+      <p>Strumenti SEO e campagne che portano risultati concreti.</p>
+    </div>
+  </li>
+  <li class="vantaggiCards">
+    <div class="icon">🎨</div>
+    <div class="text">
+      <strong>Design professionale e moderno</strong>
+      <p>Siti responsive che trasmettono fiducia e competenza.</p>
+    </div>
+  </li>
+  <li class="vantaggiCards">
+    <div class="icon">🧑🏻‍🤝‍🧑🏻</div>
+    <div class="text">
+      <strong>Successo comprovato e garantito</strong>
+      <p>+100 imprenditori si sono affidati a noi per aumentare la clientela.</p>
+    </div>
+  </li>
+</ul>
+</div>
+
+      <!-- Immagine -->
+    <div class="col-lg-6 text-center hero-image" style="padding-left: 5rem;">
+      <img src="output.jpg" 
+          alt="Team che lavora sul digitale" 
+          class="img-fluid rounded img-bordered">
+    </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="pacchetti" style="background: linear-gradient(135deg, #080433, #2b0a45);">
+  <div class="container column" style="flex-direction: column !important;">
+    <div class="container column mb-5 mt-5">
+      <h1 class="hero-title"> Scegli uno dei nostri pacchetti </h1>
+    </div>
+    <div class="container row mt-3 mb-5 pacchetti">
+      <!-- BASIC -->
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-card">
+          <h4 class="plan-name">Basic</h4>
+          <div class="price">€990</div>
+
+          <ul class="pricing-features">
+            <li>✔ Sito web professionale (1-3 pagine)</li>
+            <li>✔ Design moderno responsive</li>
+            <li>✔ Ottimizzazione SEO base</li>
+            <li>✔ Modulo contatti</li>
+            <li>✔ Consegna in 7 giorni</li>
+          </ul>
+
+          <a href="#contatti" class="pricing-btn">Inizia ora</a>
+        </div>
+      </div>
+
+      <!-- PLUS -->
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-card featured">
+          <div class="best">PIÙ SCELTO</div>
+
+          <h4 class="plan-name">Plus</h4>
+          <div class="price">€1290</div>
+
+          <ul class="pricing-features">
+            <li>✔ Sito web completo (fino a 6 pagine)</li>
+            <li>✔ SEO avanzata</li>
+            <li>✔ Landing page ad alta conversione</li>
+            <li>✔ Collegamento Google Analytics</li>
+            <li>✔ Supporto dedicato 30 giorni</li>
+          </ul>
+
+          <a href="#contatti" class="pricing-btn">Richiedi consulenza</a>
+        </div>
+      </div>
+
+      <!-- PREMIUM -->
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-card">
+          <h4 class="plan-name">Premium</h4>
+          <div class="price">€2190</div>
+
+          <ul class="pricing-features">
+            <li>✔ Sito web avanzato illimitato</li>
+            <li>✔ Strategia marketing digitale</li>
+            <li>✔ SEO completa</li>
+            <li>✔ Setup campagne Google / Meta</li>
+            <li>✔ Supporto prioritario 90 giorni</li>
+          </ul>
+
+          <a href="#contatti" class="pricing-btn">Parla con noi</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+
+<section class="contact-section" id="contatti">
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 text-center">
+        <!-- Titolo -->
+        <h2 class="contact-title" style="
+            font-family:'Space Grotesk',sans-serif; 
+            font-size:2.8rem; 
+            font-weight:700; 
+            margin-bottom:15px;
+            background: linear-gradient(90deg,#6a5cff,#b44cff,#4da3ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        ">
+          Richiedi una consulenza gratuita
+        </h2>
+        <!-- Sottotitolo -->
+        <p class="text-center mb-5" style="color:#cfcfe0; font-size:1.2rem;">
+          Compila il form e ti ricontatteremo entro 24 ore. Nessun impegno, privacy garantita.
+        </p>
+        <!-- Form -->
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control modern-input" placeholder="Nome">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control modern-input" placeholder="Email">
+          </div>
+          <div class="mb-3">
+            <input class="form-control modern-input" rows="4" placeholder="Partita Iva"></input>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control modern-input" rows="4" placeholder="Descrivi il tuo progetto"></textarea>
+          </div>
+          <button type="submit" class="contact-btn w-100">
+            Invia richiesta
+          </button>
+          <p class="text-center mt-2" style="color:#cfcfe0; font-size:0.8rem;">
+          Nessun impegno, assistenza 24/7, prezzi trasparenti
+        </p>
+        </form>
+  </div>
+  <div class="col-lg-6 ml-3">
+    <h1 class="hero-title mb-4">
+    Rivoluziona il futuro della tua azienda
+    </h1>
+    <h3 class="mb-4">
+    Abbiamo già aiutato centinaia <br> 
+    di PMI in tutta italia
+    </h3>
+    <div class="trust-badges d-flex flex-wrap justify-content-center gap-3 mt-3">
+      <div class="trust-badge">
+        <span class="badge-icon">🏆</span>
+        <span class="badge-text">Oltre 200 PMI soddisfatte</span>
+      </div>
+      <div class="trust-badge">
+        <span class="badge-icon">⏱️</span>
+        <span class="badge-text">Assistenza 24/7</span>
+      </div>
+      <div class="trust-badge">
+        <span class="badge-icon">💎</span>
+        <span class="badge-text">Nessun impegno</span>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+
+<footer class="container mt-5 mb-5">
+
+<p>© 2026 Future PMI - Il futuro della tua azienda aspetta solo questo</p>
+
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+
+/* navbar scroll */
+
+window.addEventListener("scroll",function(){
+
+let nav=document.querySelector(".navbar")
+
+if(window.scrollY>50){
+nav.classList.add("scrolled")
+}else{
+nav.classList.remove("scrolled")
+}
+
+})
+
+const cards = document.querySelectorAll('.uiverse-card');
+cards.forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const cx = rect.width/2;
+    const cy = rect.height/2;
+    const dx = (x - cx)/cx;
+    const dy = (y - cy)/cy;
+    card.style.transform = `rotateX(${-dy*8}deg) rotateY(${dx*8}deg) scale(1.05)`;
+    card.style.boxShadow = `${dx*20}px ${-dy*20}px 40px rgba(106,92,255,0.35)`;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'rotateX(0) rotateY(0) scale(1)';
+    card.style.boxShadow = '0 20px 40px rgba(0,0,0,0.5)';
+  });
+});
+
+</script>
+
+
+</body>
+</html>
